@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Mia Scrivania Progetti</title>
+    <title>La nostra scuola</title>
     <style>
         :root {
-            --bg-color: #f4f7f6;
+            --bg-color: #fdfdfd;
             --desk-color: #ffffff;
-            --accent-color: #3498db;
-            --text-color: #2c3e50;
-            --shadow: 0 10px 20px rgba(0,0,0,0.05);
-            --hover-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            --text-color: #333;
+            --shadow: 0 8px 15px rgba(0,0,0,0.05);
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             background-color: var(--bg-color);
             margin: 0;
             display: flex;
@@ -26,135 +24,132 @@
         }
 
         header {
-            margin-top: 50px;
+            margin-top: 60px;
             text-align: center;
         }
 
         h1 {
-            font-weight: 300;
-            color: #7f8c8d;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #444;
+            margin-bottom: 10px;
+            text-transform: lowercase; /* Stile moderno */
         }
 
-        /* Contenitore Scrivania */
+        h1::after {
+            content: '.';
+            color: #3498db;
+        }
+
+        .subtitle {
+            color: #888;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        /* Griglia Scrivania */
         .desk-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
             width: 90%;
-            max-width: 1200px;
-            padding: 40px;
-            background: var(--desk-color);
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            margin: 40px 0;
-            border-bottom: 10px solid #e0e0e0; /* Effetto spessore tavolo */
+            max-width: 1100px;
+            padding: 20px;
+            margin-bottom: 60px;
         }
 
-        /* Pulsanti/Card */
+        /* Card Personalizzate */
         .project-card {
             background: #fff;
-            border: 1px solid #eee;
-            border-radius: 12px;
-            padding: 25px;
+            border-radius: 20px;
+            padding: 30px;
             text-decoration: none;
-            color: var(--text-color);
-            transition: all 0.3s ease;
+            color: inherit;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             display: flex;
             flex-direction: column;
-            align-items: center;
-            text-align: center;
+            align-items: flex-start;
+            box-shadow: var(--shadow);
+            border: 1px solid #f0f0f0;
             position: relative;
-            overflow: hidden;
-        }
-
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 5px;
-            height: 100%;
-            background-color: var(--accent-color);
         }
 
         .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--hover-shadow);
-            border-color: var(--accent-color);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
 
         .icon {
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 15px;
         }
 
         .project-title {
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin-bottom: 10px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
         }
 
-        .project-link-text {
-            font-size: 0.8rem;
-            color: #95a5a6;
-            word-break: break-all;
+        .catchphrase {
+            font-size: 0.95rem;
+            font-style: italic;
+            opacity: 0.8;
+            margin-bottom: 15px;
+            line-height: 1.4;
         }
 
-        /* Responsive */
+        /* Colori Specifici per Progetto */
+        .card-dante { border-top: 6px solid #e67e22; } /* Arancio/Mattone */
+        .card-donne { border-top: 6px solid #9b59b6; } /* Viola */
+        .card-dietro { border-top: 6px solid #2ecc71; } /* Verde */
+        .card-open { border-top: 6px solid #3498db; }  /* Blu */
+        .card-cavalieri { border-top: 6px solid #f1c40f; } /* Giallo Oro */
+
         @media (max-width: 600px) {
-            .desk-container {
-                padding: 20px;
-                grid-template-columns: 1fr;
-            }
+            .desk-container { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Area di Lavoro</h1>
-        <p>Seleziona un progetto per aprirlo</p>
+        <h1>la nostra scuola</h1>
+        <p class="subtitle">I nostri lavori, le nostre idee</p>
     </header>
 
     <main class="desk-container">
         
-        <a href="https://zahira914.github.io/Piazza-Dante/" target="_blank" class="project-card">
+        <a href="https://zahira914.github.io/Piazza-Dante/" target="_blank" class="project-card card-dante">
             <div class="icon">🏛️</div>
             <div class="project-title">Piazza Dante</div>
-            <div class="project-link-text">zahira914.github.io</div>
+            <div class="catchphrase">"Un viaggio immortale tra le bellezze e la storia del cuore di Napoli."</div>
         </a>
 
-        <a href="https://francescobale017-dotcom.github.io/violenza-sulle-donne-/" target="_blank" class="project-card">
+        <a href="https://francescobale017-dotcom.github.io/violenza-sulle-donne-/" target="_blank" class="project-card card-donne">
             <div class="icon">💜</div>
             <div class="project-title">Violenza sulle Donne</div>
-            <div class="project-link-text">francescobale017.github.io</div>
+            <div class="catchphrase">"Non una di meno: la consapevolezza è il primo passo verso il rispetto."</div>
         </a>
 
-        <a href="https://evelyn12345678901.github.io/OPEN-BOOK/#dietrolequinte" target="_blank" class="project-card">
-            <div class="icon">🎭</div>
-            <div class="project-title">OPEN BOOK - Dietro le Quinte</div>
-            <div class="project-link-text">evelyn12345678901.github.io</div>
+        <a href="https://evelyn12345678901.github.io/OPEN-BOOK/#dietrolequinte" target="_blank" class="project-card card-dietro">
+            <div class="icon">✨</div>
+            <div class="project-title">Dietro le Quinte</div>
+            <div class="catchphrase">"Scopri il processo creativo e il lavoro invisibile che dà vita al libro."</div>
         </a>
 
-        <a href="https://zofiaz14.github.io/THE-OPEN-BOOK/" target="_blank" class="project-card">
+        <a href="https://zofiaz14.github.io/THE-OPEN-BOOK/" target="_blank" class="project-card card-open">
             <div class="icon">📖</div>
             <div class="project-title">THE OPEN BOOK</div>
-            <div class="project-link-text">zofiaz14.github.io</div>
+            <div class="catchphrase">"Dove le pagine si aprono su nuovi mondi da esplorare."</div>
         </a>
 
-        <a href="https://medeea710.github.io/IIS-Cavalieri/#" target="_blank" class="project-card">
-            <div class="icon">🏫</div>
+        <a href="https://medeea710.github.io/IIS-Cavalieri/#" target="_blank" class="project-card card-cavalieri">
+            <div class="icon">🎓</div>
             <div class="project-title">IIS Cavalieri</div>
-            <div class="project-link-text">medeea710.github.io</div>
+            <div class="catchphrase">"La nostra identità, il nostro istituto, il nostro futuro."</div>
         </a>
 
     </main>
-
-    <footer style="margin-bottom: 40px; color: #bdc3c7; font-size: 0.9rem;">
-        &copy; 2024 - Hub Progetti Scrivania Digitale
-    </footer>
 
 </body>
 </html>
