@@ -80,4 +80,84 @@
         .project-card::before {
             content: '';
             position: absolute;
-            left:
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 8px;
+        }
+
+        /* Colori per card */
+        .card-dante::before { background-color: #d35400; }    /* Terra/Dante */
+        .card-donne::before { background-color: #8e44ad; }    /* Viola sociale */
+        .card-dietro::before { background-color: #27ae60; }   /* Verde creativo */
+        .card-open::before { background-color: #2980b9; }    /* Blu libro */
+        .card-cavalieri::before { background-color: #f39c12; }/* Oro istituto */
+
+        .icon {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .project-title {
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: #1e272e;
+        }
+
+        .catchphrase {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: var(--text-sub);
+            font-style: italic;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2.2rem; }
+            .desk-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>La nostra scuola</h1>
+        <p class="subtitle">Esplora i nostri progetti digitali</p>
+    </header>
+
+    <main class="desk-container">
+        
+        <a href="https://zahira914.github.io/Piazza-Dante/" target="_blank" class="project-card card-dante">
+            <div class="icon">🏛️</div>
+            <div class="project-title">Piazza Dante</div>
+            <div class="catchphrase">"Un viaggio immortale tra le bellezze e la storia del cuore di Napoli."</div>
+        </a>
+
+        <a href="https://francescobale017-dotcom.github.io/violenza-sulle-donne-/" target="_blank" class="project-card card-donne">
+            <div class="icon">💜</div>
+            <div class="project-title">Violenza sulle Donne</div>
+            <div class="catchphrase">"Non una di meno: la consapevolezza è il primo passo verso il rispetto."</div>
+        </a>
+
+        <a href="https://evelyn12345678901.github.io/OPEN-BOOK/#dietrolequinte" target="_blank" class="project-card card-dietro">
+            <div class="icon">✨</div>
+            <div class="project-title">Dietro le Quinte</div>
+            <div class="catchphrase">"Scopri il processo creativo e il lavoro invisibile che dà vita al libro."</div>
+        </a>
+
+        <a href="https://zofiaz14.github.io/THE-OPEN-BOOK/" target="_blank" class="project-card card-open">
+            <div class="icon">📖</div>
+            <div class="project-title">THE OPEN BOOK</div>
+            <div class="catchphrase">"Dove le pagine si aprono su nuovi mondi da esplorare."</div>
+        </a>
+
+        <a href="https://medeea710.github.io/IIS-Cavalieri/#" target="_blank" class="project-card card-cavalieri">
+            <div class="icon">🎓</div>
+            <div class="project-title">IIS Cavalieri</div>
+            <div class="catchphrase">"La nostra identità, il nostro istituto, il nostro futuro."</div>
+        </a>
+
+    </main>
+
+</body>
+</html>
