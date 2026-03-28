@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Mia Scrivania Progetti</title>
+    <style>
+        :root {
+            --bg-color: #f4f7f6;
+            --desk-color: #ffffff;
+            --accent-color: #3498db;
+            --text-color: #2c3e50;
+            --shadow: 0 10px 20px rgba(0,0,0,0.05);
+            --hover-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            color: var(--text-color);
+        }
+
+        header {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        h1 {
+            font-weight: 300;
+            color: #7f8c8d;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Contenitore Scrivania */
+        .desk-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            width: 90%;
+            max-width: 1200px;
+            padding: 40px;
+            background: var(--desk-color);
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            margin: 40px 0;
+            border-bottom: 10px solid #e0e0e0; /* Effetto spessore tavolo */
+        }
+
+        /* Pulsanti/Card */
+        .project-card {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            padding: 25px;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background-color: var(--accent-color);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--hover-shadow);
+            border-color: var(--accent-color);
+        }
+
+        .icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .project-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .project-link-text {
+            font-size: 0.8rem;
+            color: #95a5a6;
+            word-break: break-all;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .desk-container {
+                padding: 20px;
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Area di Lavoro</h1>
+        <p>Seleziona un progetto per aprirlo</p>
+    </header>
+
+    <main class="desk-container">
+        
+        <a href="https://zahira914.github.io/Piazza-Dante/" target="_blank" class="project-card">
+            <div class="icon">🏛️</div>
+            <div class="project-title">Piazza Dante</div>
+            <div class="project-link-text">zahira914.github.io</div>
+        </a>
+
+        <a href="https://francescobale017-dotcom.github.io/violenza-sulle-donne-/" target="_blank" class="project-card">
+            <div class="icon">💜</div>
+            <div class="project-title">Violenza sulle Donne</div>
+            <div class="project-link-text">francescobale017.github.io</div>
+        </a>
+
+        <a href="https://evelyn12345678901.github.io/OPEN-BOOK/#dietrolequinte" target="_blank" class="project-card">
+            <div class="icon">🎭</div>
+            <div class="project-title">OPEN BOOK - Dietro le Quinte</div>
+            <div class="project-link-text">evelyn12345678901.github.io</div>
+        </a>
+
+        <a href="https://zofiaz14.github.io/THE-OPEN-BOOK/" target="_blank" class="project-card">
+            <div class="icon">📖</div>
+            <div class="project-title">THE OPEN BOOK</div>
+            <div class="project-link-text">zofiaz14.github.io</div>
+        </a>
+
+        <a href="https://medeea710.github.io/IIS-Cavalieri/#" target="_blank" class="project-card">
+            <div class="icon">🏫</div>
+            <div class="project-title">IIS Cavalieri</div>
+            <div class="project-link-text">medeea710.github.io</div>
+        </a>
+
+    </main>
+
+    <footer style="margin-bottom: 40px; color: #bdc3c7; font-size: 0.9rem;">
+        &copy; 2024 - Hub Progetti Scrivania Digitale
+    </footer>
+
+</body>
+</html>
