@@ -44,7 +44,6 @@
             margin-top: 10px;
         }
 
-        /* Griglia Scrivania */
         .desk-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -55,7 +54,6 @@
             margin-bottom: 50px;
         }
 
-        /* Card / Pulsanti */
         .project-card {
             background: var(--card-bg);
             border-radius: 24px;
@@ -76,7 +74,6 @@
             box-shadow: 0 12px 30px rgba(0,0,0,0.12);
         }
 
-        /* Indicatori di colore laterali */
         .project-card::before {
             content: '';
             position: absolute;
@@ -86,18 +83,29 @@
             width: 8px;
         }
 
-        /* Colori per card */
-        .card-dante::before { background-color: #d35400; }     /* Terra/Dante */
-        .card-donne::before { background-color: #8e44ad; }     /* Viola sociale */
-        .card-dietro::before { background-color: #27ae60; }    /* Verde creativo */
-        .card-open::before { background-color: #2980b9; }     /* Blu libro */
-        .card-cavalieri::before { background-color: #f39c12; } /* Oro istituto */
-        .card-love::before { background-color: #e84393; }      /* Rosa/Amore */
-        .card-tempi::before { background-color: #2d3436; }     /* Grigio scuro/Storia */
+        /* Colori laterali */
+        .card-dante::before { background-color: #d35400; }
+        .card-donne::before { background-color: #8e44ad; }
+        .card-dietro::before { background-color: #27ae60; }
+        .card-open::before { background-color: #2980b9; }
+        .card-cavalieri::before { background-color: #f39c12; }
+        .card-love::before { background-color: #e84393; }
+        .card-tempi::before { background-color: #2d3436; }
 
+        /* Stile per le immagini al posto delle icone */
         .icon {
-            font-size: 2.2rem;
+            width: 60px;
+            height: 60px;
             margin-bottom: 15px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .project-title {
@@ -130,43 +138,43 @@
     <main class="desk-container">
         
         <a href="https://zahira914.github.io/Piazza-Dante/" target="_blank" class="project-card card-dante">
-            <div class="icon">🏛️</div>
+            <div class="icon"><img src="BEATRICE.jpg" alt="Beatrice"></div>
             <div class="project-title">Piazza Dante</div>
             <div class="catchphrase">"Piazza Dante: Un angolo speciale della nostra scuola."</div>
         </a>
 
         <a href="https://francescobale017-dotcom.github.io/violenza-sulle-donne-/" target="_blank" class="project-card card-donne">
-            <div class="icon">💜</div>
+            <div class="icon"><img src="VIOLENZA SULLE DONNE.PNG" alt="Violenza sulle donne"></div>
             <div class="project-title">Violenza sulle Donne</div>
             <div class="catchphrase">"Non una di meno: la consapevolezza è il primo passo verso il rispetto."</div>
         </a>
 
         <a href="https://evelyn12345678901.github.io/OPEN-BOOK/" target="_blank" class="project-card card-dietro">
-            <div class="icon">✨</div>
+            <div class="icon"><img src="OPENBOOK.PNG" alt="Open Book"></div>
             <div class="project-title">OPEN BOOK</div>
             <div class="catchphrase">"Scopri il processo creativo e il lavoro invisibile che dà vita al libro."</div>
         </a>
 
         <a href="https://zofiaz14.github.io/THE-OPEN-BOOK/" target="_blank" class="project-card card-open">
-            <div class="icon">📖</div>
+            <div class="icon"><img src="OPENBOOK.PNG" alt="The Open Book"></div>
             <div class="project-title">THE OPEN BOOK</div>
             <div class="catchphrase">"Dove le pagine si aprono su nuovi mondi da esplorare."</div>
         </a>
 
         <a href="https://medeea710.github.io/IIS-Cavalieri/#" target="_blank" class="project-card card-cavalieri">
-            <div class="icon">🎓</div>
+            <div class="icon"><img src="IISCAVALIERIMARIGNONI.jpg" alt="IIS Cavalieri"></div>
             <div class="project-title">IIS Cavalieri</div>
             <div class="catchphrase">"La nostra identità, il nostro istituto, il nostro futuro."</div>
         </a>
 
         <a href="https://zofiaz14.github.io/LOVE-N-PLAY/" target="_blank" class="project-card card-love">
-            <div class="icon">🎮</div>
+            <div class="icon"><img src="LOVENPLAY.PNG" alt="Love n Play"></div>
             <div class="project-title">LOVE-N-PLAY</div>
             <div class="catchphrase">"Dove il gioco incontra le emozioni in un'esperienza interattiva."</div>
         </a>
 
         <a href="https://samarahbarakat.github.io/Linea-dei-tempi/" target="_blank" class="project-card card-tempi">
-            <div class="icon">⏳</div>
+            <div class="icon"><img src="LINEA DEL TEMPO.jpg" alt="Linea dei tempi"></div>
             <div class="project-title">Linea dei tempi</div>
             <div class="catchphrase">"Un viaggio cronologico attraverso i momenti che hanno fatto la storia."</div>
         </a>
