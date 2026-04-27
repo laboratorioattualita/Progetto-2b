@@ -7,7 +7,7 @@
     <style>
         :root {
             --bg-color: #f8f9fa;
-            --card-bg: #ffffff;
+            --card-bg: rgba(255, 255, 255, 0.9); /* Card leggermente trasparenti per far intravedere lo sfondo */
             --text-main: #2d3436;
             --text-sub: #636e72;
             --shadow: 0 4px 20px rgba(0,0,0,0.08);
@@ -22,12 +22,33 @@
             align-items: center;
             min-height: 100vh;
             color: var(--text-main);
+            position: relative;
+        }
+
+        /* SFONDO CON TRASPARENZA */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: url('SFONDO.PNG'); /* Inserimento sfondo */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.15; /* Aumenta o diminuisci questo valore per la trasparenza (0.1 è molto chiaro) */
         }
 
         header {
             margin-top: 50px;
             margin-bottom: 40px;
             text-align: center;
+            background: rgba(255, 255, 255, 0.7); /* Sfondo chiaro dietro il titolo per leggibilità */
+            padding: 20px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px); /* Effetto vetro sfocato */
         }
 
         h1 {
@@ -67,11 +88,13 @@
             border: 1px solid rgba(0,0,0,0.03);
             position: relative;
             overflow: hidden;
+            backdrop-filter: blur(10px); /* Sfoca leggermente lo sfondo sotto le card */
         }
 
         .project-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+            background: rgba(255, 255, 255, 1); /* Diventa piena al passaggio del mouse */
         }
 
         .project-card::before {
@@ -92,13 +115,14 @@
         .card-love::before { background-color: #e84393; }
         .card-tempi::before { background-color: #2d3436; }
 
-        /* Stile per le immagini al posto delle icone */
         .icon {
-            width: 60px;
-            height: 60px;
+            width: 75px;
+            height: 75px;
             margin-bottom: 15px;
             border-radius: 12px;
             overflow: hidden;
+            background-color: #f0f0f0;
+            border: 1px solid rgba(0,0,0,0.05);
         }
 
         .icon img {
@@ -138,7 +162,7 @@
     <main class="desk-container">
         
         <a href="https://zahira914.github.io/Piazza-Dante/" target="_blank" class="project-card card-dante">
-            <div class="icon"><img src="BEATRICE.PNG" alt="Beatrice"></div>
+            <div class="icon"><img src="BEATRICE.jpg" alt="Beatrice"></div>
             <div class="project-title">Piazza Dante</div>
             <div class="catchphrase">"Piazza Dante: Un angolo speciale della nostra scuola."</div>
         </a>
@@ -162,7 +186,7 @@
         </a>
 
         <a href="https://medeea710.github.io/IIS-Cavalieri/#" target="_blank" class="project-card card-cavalieri">
-            <div class="icon"><img src="IISCAVALIERIMARIGNONI.PNG" alt="IIS Cavalieri"></div>
+            <div class="icon"><img src="IISCAVALIERIMARIGNONI.jpg" alt="IIS Cavalieri"></div>
             <div class="project-title">IIS Cavalieri</div>
             <div class="catchphrase">"La nostra identità, il nostro istituto, il nostro futuro."</div>
         </a>
@@ -174,7 +198,7 @@
         </a>
 
         <a href="https://samarahbarakat.github.io/Linea-dei-tempi/" target="_blank" class="project-card card-tempi">
-            <div class="icon"><img src="LINEA DEL TEMPO.PNG" alt="Linea dei tempi"></div>
+            <div class="icon"><img src="LINEA%20DEL%20TEMPO.jpg" alt="Linea dei tempi"></div>
             <div class="project-title">Linea dei tempi</div>
             <div class="catchphrase">"Un viaggio cronologico attraverso i momenti che hanno fatto la storia."</div>
         </a>
